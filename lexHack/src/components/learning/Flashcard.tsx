@@ -35,13 +35,13 @@ export default function Flashcard({ front, back, onComplete }: FlashcardProps) {
       >
         <motion.div 
           className="w-full h-full glassmorphism rounded-xl cursor-pointer transition-transform duration-500"
-          animate={{ rotateY: isFlipped ? 180 : 0 }}
+          animate={{ rotateY: isFlipped ? 0 : 180 }}
           style={{ transformStyle: "preserve-3d" }}
           onClick={handleFlip}
         >
           {/* Front */}
           <div 
-            className={`absolute w-full h-full p-6 flex flex-col items-center justify-center backface-hidden rounded-xl ${isFlipped ? 'opacity-0' : 'opacity-100'}`}
+            className={`absolute w-full h-full p-6 flex flex-col items-center justify-center backface-hidden rounded-xl ${isFlipped ? 'opacity-100' : 'opacity-0'}`}
             style={{ backfaceVisibility: "hidden" }}
           >
             <h2 className="text-2xl font-bold text-center text-gold mb-4">Latin</h2>
@@ -51,7 +51,7 @@ export default function Flashcard({ front, back, onComplete }: FlashcardProps) {
 
           {/* Back */}
           <div 
-            className={`absolute w-full h-full p-6 flex flex-col items-center justify-center backface-hidden rounded-xl ${isFlipped ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute w-full h-full p-6 flex flex-col items-center justify-center backface-hidden rounded-xl ${isFlipped ? 'opacity-0' : 'opacity-100'}`}
             style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
           >
             <h2 className="text-2xl font-bold text-center text-accent mb-4">English</h2>
