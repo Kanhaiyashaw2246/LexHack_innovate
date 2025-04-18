@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Gothic theme - dark by default */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 280 50% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 250 35% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 310 50% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 280 50% 50%;
+
+    --gold: 45 100% 50%;
+    --gold-foreground: 0 0% 0%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 280 50% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 280 50% 50%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 280 50% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 310 50% 35%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 280 50% 40%;
+
+    --gold: 45 90% 45%;
+    --gold-foreground: 0 0% 0%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 280 50% 40%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 280 50% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cinzel', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-wide;
+  }
+}
+
+@layer utilities {
+  .claymorphism {
+    @apply rounded-xl bg-secondary/80 border-2 border-secondary-foreground/10 shadow-[6px_6px_10px_0px_rgba(0,0,0,0.2),-4px_-4px_10px_0px_rgba(255,255,255,0.05)] transform-gpu transition-transform duration-300 ease-out active:translate-y-1 active:shadow-[2px_2px_5px_0px_rgba(0,0,0,0.3),-2px_-2px_5px_0px_rgba(255,255,255,0.05)];
+  }
+
+  .glassmorphism {
+    @apply bg-secondary/20 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  
+  .floating-emoji {
+    @apply fixed pointer-events-none select-none opacity-20 z-0;
+  }
+  
+  .xp-toast {
+    @apply fixed z-50 px-4 py-2 text-center font-bold rounded-full bg-gold text-gold-foreground animate-xp-popup;
+  }
+  
+  .progress-bar {
+    @apply relative h-2 w-full bg-muted overflow-hidden rounded-full;
+  }
+  
+  .progress-bar-fill {
+    @apply absolute top-0 left-0 h-full bg-primary transition-all duration-300 ease-out;
+  }
+  
+  .flip-card {
+    @apply relative w-full h-full transition-transform duration-700 transform-style-3d;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card-front, .flip-card-back {
+    @apply absolute w-full h-full backface-hidden rounded-xl p-6;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+  }
+}
