@@ -90,7 +90,7 @@ export const mockLearningModules: LearningModule[] = [
         id: "activity2-1",
         type: "flashcard",
         content: {
-          front: "Ignorantia legis neminem excusat",
+          front: "Pacta sunt servanda",
           back: "Ignorance of the law excuses no one"
         },
         xpReward: 15,

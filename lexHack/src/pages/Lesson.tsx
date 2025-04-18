@@ -247,8 +247,8 @@ export default function Lesson() {
           </div>
           
           <div className="glassmorphism p-6 rounded-xl">
-            <h1 className="text-2xl md:text-3xl font-bold text-gold mb-2">{currentMaxim.latin}</h1>
-            <p className="text-lg italic mb-4">"{currentMaxim.english}"</p>
+            <h1 className="text-2xl md:text-3xl font-bold text-gold mb-2">{currentMaxim.english}</h1>
+            {/* <p className="text-lg italic mb-4">"{currentMaxim.english}"</p> */}
             <p className="text-sm text-muted-foreground mb-3">{currentMaxim.description}</p>
             
             {/* Progress bar */}
