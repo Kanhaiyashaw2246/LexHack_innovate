@@ -20,6 +20,8 @@ interface AppLayoutProps {
   children: ReactNode;
 }
 
+// Functions
+
 export default function AppLayout({ children }: AppLayoutProps) {
   const { currentUser, logout } = useAuth();
   const { xpProgress } = useApp();
