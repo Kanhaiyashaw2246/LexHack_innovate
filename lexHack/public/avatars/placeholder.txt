@@ -1,3 +1,6 @@
 
-Placeholder for avatar images. 
-Replace this with actual avatar image files.
+<img
+  src="/avatars/law.png"
+  alt="User Avatar"
+  className="w-10 h-10 rounded-full"
+/>

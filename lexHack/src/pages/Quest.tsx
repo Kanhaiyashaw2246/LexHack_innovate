@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SendHorizontal, Bot, User, Trophy, Coins, CheckCircle, XCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { BookOpen } from "lucide-react";
 
 type ConversationMessage = {
   role: "user" | "assistant" | "quiz";
@@ -189,12 +190,12 @@ export default function LexiQuest() {
       setRewards(prev => prev + 10);
       setConversation(prev => [...prev, {
         role: "assistant",
-        content: `Correct! Well done! <CheckCircle className="inline h-5 w-5 text-green-400" />`
+        content: `Correct! Well done! />`
       }]);
     } else {
       setConversation(prev => [...prev, {
         role: "assistant",
-        content: `Incorrect. The correct answer was: ${currentQuestion.correctAnswer}. <XCircle className="inline h-5 w-5 text-red-400" />`
+        content: `Incorrect. The correct answer was: ${currentQuestion.correctAnswer}`
       }]);
     }
 
