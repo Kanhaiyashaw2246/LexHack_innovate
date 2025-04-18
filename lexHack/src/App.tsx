@@ -15,7 +15,7 @@ import Lesson from "./pages/Lesson";
 import Profile from "./pages/Profile";
 import Badges from "./pages/Badges";
 import Leaderboard from "./pages/Leaderboard";
-import AskGemini from "./pages/AskGemini";
+import Quest from "./pages/Quest";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,7 +38,7 @@ const App = () => (
               <Route path="/profile" element={<Profile />} />
               <Route path="/badges" element={<Badges />} />
               <Route path="/leaderboard" element={<Leaderboard />} />
-              <Route path="/ask" element={<AskGemini />} />
+              <Route path="/ask" element={<Quest />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
